@@ -1,8 +1,6 @@
 import json, base64, os
 d = json.load(open("hotspots.json")); tours = json.load(open("tours.json"))
 SRC = "/Users/rust/work/dante-super-sport/doc/images/screens"
-for s in d["screens"]:
-    if s["id"] == "hrm": s["video"] = "media/VID_20261021_180009.mp4"; s["t"] = 0
 imgs = {}
 for s in d["screens"]:
     b = open(f"{SRC}/{s['img']}", "rb").read()

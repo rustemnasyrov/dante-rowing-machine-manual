@@ -107,7 +107,6 @@ kbd{border:1px solid var(--line);border-radius:5px;padding:0 5px;font:12px monos
       <button class="btn" id="back">← Назад</button>
       <button class="btn" id="home">⌂ Главное меню</button>
       <button class="btn" id="zones">Показать зоны</button>
-      <a class="btn" id="video" target="_blank" rel="noopener">▶ Фрагмент видео</a>
     </div>
     <div class="under" style="font-size:12px">Щёлкайте по элементам экрана. Подсказка: <kbd>Esc</kbd> — назад, <kbd>Z</kbd> — зоны, <kbd>H</kbd> — главное меню.</div>
   </section>
@@ -135,8 +134,7 @@ kbd{border:1px solid var(--line);border-radius:5px;padding:0 5px;font:12px monos
 
 <main id="about" class="about">
   <h2>О справке</h2>
-  <p>Интерактивная справка по панели управления DC2 гребного тренажёра Dante (прошивка 0.6.10). Экраны сняты с реального устройства, зоны размечены по видеообзору и исходному коду прошивки. Файл автономный: откройте его в любом браузере.</p>
-  <p>Ссылки «Фрагмент видео» открывают исходный видеообзор из папки <code>media</code> на нужной секунде, если файл лежит рядом с этой справкой.</p>
+  <p>Интерактивная справка по панели управления DC2 гребного тренажёра Dante (прошивка 0.6.10). Экраны сняты с реального устройства, описания элементов составлены по исходному коду прошивки. Файл автономный: откройте его в любом браузере.</p>
   <p>Полное руководство: <b>Руководство_пользователя_DC2.md</b>. Памятка на одну страницу: <b>Быстрый_старт.pdf</b>.</p>
 </main>
 
@@ -187,7 +185,6 @@ function show(id,push=true){
   const targets=[...new Set(s.hotspots.filter(h=>h.go).map(h=>h.go))];
   if(s.parent)targets.unshift(s.parent);
   targets.forEach(t=>{const c=document.createElement('span');c.className='chip';c.textContent=S[t].title;c.onclick=()=>show(t);links.appendChild(c)});
-  const v=$('video'); const file=s.video||'media/VID_20261021_175126.mp4'; v.href=file+'#t='+(s.t||0); v.textContent='▶ Фрагмент видео ('+fmt(s.t||0)+')';
   $('back').disabled=!hist.length;
   location.hash=id;
 }
