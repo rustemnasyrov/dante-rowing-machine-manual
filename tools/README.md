@@ -27,3 +27,7 @@ PDF памятки получен из `Быстрый_старт.html` чере
 ## crop_ui.py
 
 Вырезает элементы интерфейса из `images/screens/*.jpg` по координатам (как в `hotspots.json`) и собирает наборные картинки с подписями в `images/ui/`. Запуск из папки `doc`: `python3 tools/crop_ui.py` (нужен только Pillow).
+
+## extract_photo.py
+
+Вырезает экраны из фотографий `media/IMG_*.jpg`: грубая оценка по чёрной рамке корпуса, затем точный поиск четырёх границ экрана по перепаду яркости и перспективное выравнивание в 600×1024. Из фото получены main, fast_start, fast_start_splits, program_create, race_setup, history, athlete, connections, wifi_connected, hrm, options.
