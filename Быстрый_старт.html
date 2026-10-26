@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dante DC2 — быстрый старт</title>
+<style>
+  @page { size: A4 portrait; margin: 8mm; }
+  :root { --bg:#0e1419; --panel:#141c23; --line:#1f2b35; --cy:#22d3ee; --cy2:#67e8f9; --txt:#e6edf3; --mut:#9fb3c8; --or:#f59e0b; --ok:#34d399; }
+  * { box-sizing: border-box; }
+  html, body { margin:0; background:#1b232b; color:var(--txt); font: 10.4px/1.3 -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; }
+  .page { width: 210mm; min-height: 297mm; margin: 10px auto; background: var(--bg); padding: 8mm; display:flex; flex-direction:column; gap:6px; }
+  @media print { html, body { background:var(--bg); } .page { margin:0; width:auto; min-height:auto; padding:0; } }
+  header { display:flex; align-items:center; gap:14px; border-bottom:2px solid var(--cy); padding-bottom:6px; }
+  header h1 { margin:0; font-size:21px; letter-spacing:.5px; }
+  header h1 small { display:block; font-size:11px; color:var(--mut); font-weight:400; letter-spacing:0; margin-top:2px; }
+  .badge { margin-left:auto; text-align:right; color:var(--mut); font-size:10px; }
+  .badge b { color:var(--cy2); font-size:12px; display:block; }
+  .grid { display:grid; grid-template-columns: 1fr 1fr 1fr; gap:6px; }
+  .grid4 { display:grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap:6px; }
+  .bar { background:var(--panel); border:1px solid var(--line); border-radius:8px; padding:5px 8px; display:flex; gap:14px; align-items:center; }
+  .card { background:var(--panel); border:1px solid var(--line); border-radius:8px; padding:6px 7px; }
+  .card h2 { margin:0 0 5px; font-size:12.5px; color:var(--cy2); text-transform:uppercase; letter-spacing:.6px; display:flex; align-items:center; gap:6px; }
+  .num { display:inline-flex; width:20px; height:20px; border-radius:50%; background:var(--or); color:#000; font-weight:700; align-items:center; justify-content:center; font-size:12px; flex:none; }
+  .steps { display:flex; flex-direction:column; gap:4px; }
+  .step { display:flex; gap:6px; align-items:flex-start; }
+  .step .num { width:17px; height:17px; font-size:10.5px; margin-top:1px; }
+  .shot { width:100%; border-radius:5px; border:1px solid #2a3947; display:block; }
+  .row { display:flex; gap:6px; align-items:flex-start; }
+  .row .shot { width:33%; }
+  kbd { display:inline-block; border:1px solid var(--cy); color:var(--cy2); border-radius:10px; padding:0 6px; font-size:10px; font-family:inherit; white-space:nowrap; }
+  .mut { color:var(--mut); }
+  .legend { display:grid; grid-template-columns: 1fr 1fr 1fr; gap:2px 8px; }
+  .legend > div { display:flex; gap:5px; align-items:flex-start; }
+  .legend .num { width:15px; height:15px; font-size:9.5px; margin-top:1px; }
+  .wide { grid-column: 1 / -1; }
+  .three { display:grid; grid-template-columns: 1.15fr 1fr 1fr; gap:6px; }
+  .icons { display:grid; grid-template-columns:auto 1fr; gap:3px 8px; align-items:center; }
+  .ico { width:30px; height:18px; display:flex; align-items:center; justify-content:center; }
+  .warn { border-left:3px solid var(--or); padding-left:6px; }
+  .tip { border-left:3px solid var(--ok); padding-left:6px; }
+  footer { margin-top:auto; color:var(--mut); font-size:9.5px; display:flex; justify-content:space-between; border-top:1px solid var(--line); padding-top:4px; }
+  svg { display:block; }
+</style>
+</head>
+<body>
+<div class="page">
+  <header>
+    <svg width="44" height="44" viewBox="0 0 44 44"><rect x="6" y="2" width="32" height="40" rx="5" fill="#0b0f13" stroke="#22d3ee" stroke-width="2"/><rect x="10" y="7" width="24" height="30" rx="2" fill="#1b262f"/><path d="M14 13h16M14 18h16M14 23h12" stroke="#22d3ee" stroke-width="2" stroke-linecap="round"/></svg>
+    <h1>Гребной тренажёр Dante — панель управления DC2<small>Быстрый старт: первая тренировка за две минуты</small></h1>
+    <div class="badge"><b>Прошивка 0.6.10</b>Полное руководство: «Руководство_пользователя_DC2»</div>
+  </header>
+
+  <div class="three">
+    <div class="card">
+      <h2><span class="num">1</span>Включите и выберите цель</h2>
+      <div class="row">
+        <img class="shot" src="images/screens/main.jpg" alt="Главное меню">
+        <div class="steps">
+          <div class="step"><span class="num">а</span><div>Включите питание переключателем на корпусе — откроется <b>главное меню</b>.</div></div>
+          <div class="step"><span class="num">б</span><div>Нажмите <kbd>БЫСТРАЯ ТРЕНИРОВКА</kbd>.</div></div>
+          <div class="step"><span class="num">в</span><div>Выберите пресет: <b>1000…10000 м</b>, <b>30 мин</b>, <b>5×500 м</b> или <b>со сплитами</b>.</div></div>
+          <div class="step"><span class="num">г</span><div>Нажмите синюю кнопку с гребцом внизу.</div></div>
+        </div>
+      </div>
+      <p class="tip" style="margin:5px 0 0">Ещё проще: начните грести прямо в главном меню — панель сама откроет экран тренировки.</p>
+    </div>
+
+    <div class="card">
+      <h2><span class="num">2</span>Гребите</h2>
+      <div class="row">
+        <img class="shot" src="images/screens/fast_start.jpg" alt="Быстрая тренировка">
+        <div class="steps">
+          <div class="step"><span class="num">а</span><div>После запуска на экране нули — <b>отсчёт начнётся с первого гребка</b>.</div></div>
+          <div class="step"><span class="num">б</span><div>Дистанция идёт <b>на уменьшение</b>, время — вперёд.</div></div>
+          <div class="step"><span class="num">в</span><div>Цель достигнута — экран <b>ФИНИШ</b>; запись уже в истории.</div></div>
+          <div class="step"><span class="num">г</span><div>Выйти раньше: <kbd>МЕНЮ</kbd> → <kbd>OK</kbd> (пометка «Не завершена!»).</div></div>
+        </div>
+      </div>
+      <p class="warn" style="margin:5px 0 0">Между интервалами — экран <b>ОТДЫХ</b> с отсчётом; три коротких сигнала — скоро следующий интервал.</p>
+    </div>
+
+    <div class="card">
+      <h2><span class="num">3</span>Смотрите результат</h2>
+      <div class="row">
+        <img class="shot" src="images/screens/history.jpg" alt="История тренировок">
+        <div class="steps">
+          <div class="step"><span class="num">а</span><div><kbd>ИСТОРИЯ ТРЕНИРОВОК</kbd> — список от новых к старым: дистанция, время, мощность, темп, частота.</div></div>
+          <div class="step"><span class="num">б</span><div><kbd>ПОДРОБНЕЕ</kbd> — таблица по интервалам и сплитам.</div></div>
+          <div class="step"><span class="num">в</span><div><kbd>СПОРТСМЕН</kbd> — задайте вес в одном из 6 профилей: он попадёт в запись.</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card wide">
+      <h2>Что на экране тренировки</h2>
+      <div style="display:grid; grid-template-columns: 118px 1fr; gap:8px; align-items:start">
+        <img class="shot" src="images/annotated/active_workout.jpg" alt="Экран тренировки">
+        <div class="legend">
+          <div><span class="num">1</span><div><b>Время</b> от первого гребка (отдых входит)</div></div>
+          <div><span class="num">2</span><div><b>Дистанция</b>: остаток до цели или пройдено</div></div>
+          <div><span class="num">3</span><div><b>Текущий темп</b> /500 м по текущей скорости</div></div>
+          <div><span class="num">4</span><div><b>Гребков в минуту</b> сейчас</div></div>
+          <div><span class="num">5</span><div><b>Пульс</b> (если подключён пульсометр)</div></div>
+          <div><span class="num">6</span><div><b>Средний темп</b> за интервал; пока стоите — ухудшается</div></div>
+          <div><span class="num">7</span><div><b>Средняя частота</b> за интервал</div></div>
+          <div><span class="num">8</span><div><b>Прогноз</b> — метры за 30 мин при таком темпе</div></div>
+          <div><span class="num">9</span><div><b>Кривая мощности гребка</b>: жёлтая — последний, серая — предыдущий, светлая — эталон/лучший</div></div>
+          <div><span class="num">10</span><div><b>Последний гребок</b>: длина (см), мощность (Вт), работа (Дж), сила (Н)</div></div>
+          <div><span class="num">11</span><div><kbd>ЛУЧШАЯ</kbd>/<kbd>ЭТАЛОН</kbd> и эталоны DDR · ADAM · GRINKO · RSBG</div></div>
+          <div><span class="num">12</span><div><kbd>ТЕМП</kbd> <kbd>МОЩНОСТЬ</kbd> <kbd>КАРДИО</kbd> — линии нижнего графика</div></div>
+          <div><span class="num">13</span><div><b>Интервал</b> графика: 1…25 мин</div></div>
+          <div><span class="num">14</span><div><b>История показателей</b>, точка каждые 2 с</div></div>
+          <div><span class="num">15</span><div><kbd>МЕНЮ</kbd> — выход (с подтверждением)</div></div>
+          <div><span class="num">16</span><div><kbd>СТАТИСТИКА</kbd> — показать/скрыть графики</div></div>
+          <div><span class="num">17</span><div><kbd>ЛИДЕР</kbd> — дорожка с лодкой виртуального соперника</div></div>
+        </div>
+      </div>
+  </div>
+
+  <div class="grid4">
+    <div class="card">
+      <h2>Строка состояния</h2>
+      <div class="icons">
+        <div class="ico"><svg width="26" height="18" viewBox="0 0 26 18"><path d="M2 7a15 15 0 0 1 22 0M6 11a9 9 0 0 1 14 0M10 15a3 3 0 0 1 6 0" fill="none" stroke="#22d3ee" stroke-width="2" stroke-linecap="round"/></svg></div><div><b>Синий Wi‑Fi</b> — подключено к сети</div>
+        <div class="ico"><svg width="26" height="18" viewBox="0 0 26 18"><path d="M2 7a15 15 0 0 1 22 0M6 11a9 9 0 0 1 14 0M10 15a3 3 0 0 1 6 0" fill="none" stroke="#34d399" stroke-width="2" stroke-linecap="round"/></svg></div><div><b>Зелёный Wi‑Fi</b> — связь с программой заездов</div>
+        <div class="ico"><svg width="26" height="18" viewBox="0 0 26 18"><path d="M9 2l8 7-8 7M9 2l8 14M5 6l8 6-8 6" fill="none" stroke="#22d3ee" stroke-width="2" stroke-linejoin="round"/></svg></div><div><b>Bluetooth</b> — подключён пульсометр</div>
+        <div class="ico"><svg width="30" height="18" viewBox="0 0 30 18"><rect x="2" y="4" width="22" height="10" rx="2" fill="none" stroke="#22d3ee" stroke-width="2"/><rect x="25" y="7" width="3" height="4" fill="#22d3ee"/><rect x="4" y="6" width="12" height="6" fill="#22d3ee"/></svg></div><div><b>Батарея</b>: 5 уровней; ≤10 % — на зарядку</div>
+        <div class="ico"><svg width="26" height="18" viewBox="0 0 26 18"><path d="M14 1L6 10h6l-2 7 8-9h-6z" fill="#f59e0b"/></svg></div><div><b>Молния</b> — идёт зарядка</div>
+      </div>
+      <p class="mut" style="margin:5px 0 0">Даты 19.09.2000 в истории — часы не установлены: <kbd>ОПЦИИ И НАСТРОЙКИ</kbd> → <kbd>ИЗМЕНИТЬ</kbd>.</p>
+    </div>
+
+    <div class="card">
+      <h2>Подключения</h2>
+      <div class="steps">
+        <div class="step"><span class="num">1</span><div><b>Wi‑Fi:</b> <kbd>ПОДКЛЮЧЕНИЯ</kbd> → <kbd>WI‑FI</kbd> → сеть → пароль (≥ 8 символов) → <kbd>→</kbd>. Панель помнит одну сеть.</div></div>
+        <div class="step"><span class="num">2</span><div><b>Пульсометр:</b> наденьте датчик, <kbd>ПОДКЛЮЧЕНИЯ</kbd> → <kbd>ПУЛЬСОМЕТР</kbd> → <kbd>Connect</kbd>. Пульс — в зоне 5 и на графике <kbd>КАРДИО</kbd>.</div></div>
+        <div class="step"><span class="num">3</span><div><b>Заезд:</b> панели в одной сети (значок зелёный) или по кабелю CAN; в <kbd>ЗАЕЗД</kbd> задайте группу и дорожку. Старт даёт оператор.</div></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Своя программа</h2>
+      <div class="steps">
+        <div class="step"><span class="num">1</span><div><kbd>ТРЕНИРОВКА С ПРОГРАММОЙ</kbd> — выберите слот (1…99).</div></div>
+        <div class="step"><span class="num">2</span><div>Число <b>интервалов</b>; для каждого — цель (время / дистанция / гребки), <b>отдых</b>, при желании <b>лидер</b> (темп /500 м) и <b>темп</b> (гр/мин).</div></div>
+        <div class="step"><span class="num">3</span><div>Кнопка с гребцом — старт; программа сохраняется сама.</div></div>
+      </div>
+      <p class="mut" style="margin:5px 0 0">Стрелки ▲▼ меняют одну цифру; <b>ЛИДЕР/500</b> и <b>ТЕМП</b> — выключатели (крестик = выключено).</p>
+    </div>
+
+    <div class="card">
+      <h2>Если что-то не так</h2>
+      <div class="steps">
+        <div class="step"><span class="num">?</span><div>Нули после старта — норма, сделайте гребок.</div></div>
+        <div class="step"><span class="num">?</span><div>Пароль не принимается — короче 8 символов.</div></div>
+        <div class="step"><span class="num">?</span><div>Экран гаснет — увеличьте <b>ТАЙМЕР</b> или <b>СНИЖЕНИЕ ЯРКОСТИ</b>.</div></div>
+        <div class="step"><span class="num">?</span><div>Пульс «--» — подключите пульсометр заново.</div></div>
+        <div class="step"><span class="num">?</span><div>Зависание — выключите и включите питание; данные сохраняются.</div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="bar">
+    <b style="color:var(--cy2)">ОБНОВЛЕНИЕ И УХОД</b>
+    <span>Обновления ищутся сами при Wi‑Fi с интернетом: <kbd>ОПЦИИ И НАСТРОЙКИ</kbd> → <kbd>ПОДРОБНЕЕ</kbd>. Во время обновления дисплея (несколько минут) экран не отвечает — <b>не выключайте питание</b>.</span>
+    <span class="mut">Заряд — USB Type‑C · экран только пальцем · +10…+50 °C</span>
+  </div>
+
+  <footer><span>Dante DC2 · Быстрый старт · v1.0 · 22.10.2026</span><span>Интерактивная справка: «Интерактивная_справка.html» — щёлкайте по элементам экрана</span></footer>
+</div>
+</body>
+</html>

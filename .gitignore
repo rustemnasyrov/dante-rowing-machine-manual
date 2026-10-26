@@ -1,0 +1,13 @@
+# macOS / editors
+.DS_Store
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+
+# Исходное видео обзора (2,9 ГБ) не хранится в git — только фото и расшифровки.
+media/*.mp4
+media/*.mov
+
+# Временные файлы пайплайна
+venv/
+__pycache__/
+*.pyc
