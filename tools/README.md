@@ -23,3 +23,7 @@ PDF памятки получен из `Быстрый_старт.html` чере
 "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --headless=new --no-pdf-header-footer \
   --print-to-pdf=Быстрый_старт.pdf "file://$PWD/Быстрый_старт.html"
 ```
+
+## crop_ui.py
+
+Вырезает элементы интерфейса из `images/screens/*.jpg` по координатам (как в `hotspots.json`) и собирает наборные картинки с подписями в `images/ui/`. Запуск из папки `doc`: `python3 tools/crop_ui.py` (нужен только Pillow).
