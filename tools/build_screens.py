@@ -3,8 +3,8 @@ from extract_screen import find_screen_quad, warp, order_pts
 FF = "./venv/lib/python3.14/site-packages/imageio_ffmpeg/binaries/ffmpeg-macos-aarch64-v7.1"
 VID = "/Users/rust/work/dante-super-sport/doc/media/VID_20261021_175126.mp4"
 names = {
- "main":30, "fast_start":85, "fast_start_splits":95, "splits_popup":725, "splits_popup_time":660,
- "race_setup":120, "history":1225, "workout_info":540, "athlete":1305, "wifi_list":1335,
+ "main":30, "fast_start":85, "fast_start_splits":95, "splits_popup":725, "splits_popup_time":662,
+ "race_setup":120, "history":1225, "workout_info":585, "athlete":1305, "wifi_list":1335,
  "wifi_password":1345, "wifi_connected":1320, "options":1375, "time_popup":1410,
  "program_create":785, "active_workout":170, "active_start":745, "exit_dialog":465,
  "rest":1110, "finish":1170, "active_idle":300, "active_compare":405,
