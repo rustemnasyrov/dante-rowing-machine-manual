@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Документация DC2 — гребной тренажёр Dante</title>
+<style>
+  :root { --bg:#f3f6fa; --card:#fff; --ink:#14202c; --mute:#5a6b7c; --accent:#1b6ac9; --line:#d5dde6; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--ink); font-family:-apple-system,"Helvetica Neue",Arial,sans-serif; line-height:1.45; }
+  main { max-width:860px; margin:0 auto; padding:40px 16px 60px; }
+  .brand { color:var(--accent); letter-spacing:2px; text-transform:uppercase; font-size:13px; }
+  h1 { font-size:30px; line-height:1.2; margin:8px 0 6px; }
+  .sub { color:var(--mute); margin:0 0 28px; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:16px; }
+  a.card { display:block; background:var(--card); border:1px solid var(--line); border-radius:12px; padding:20px 22px; color:inherit; text-decoration:none; box-shadow:0 2px 8px rgba(0,0,0,.05); }
+  a.card:hover { border-color:var(--accent); box-shadow:0 6px 18px rgba(27,106,201,.15); }
+  .card .k { font-size:12px; color:var(--accent); text-transform:uppercase; letter-spacing:1px; }
+  .card h2 { font-size:19px; margin:4px 0 8px; }
+  .card p { margin:0; color:var(--mute); font-size:14px; }
+  .note { margin-top:32px; color:var(--mute); font-size:14px; }
+  .note a { color:var(--accent); }
+</style>
+</head>
+<body>
+<main>
+  <div class="brand">Гребной тренажёр Dante</div>
+  <h1>Панель управления DC2<br>документация пользователя</h1>
+  <p class="sub">Прошивка 0.6.10 · версия документов 1.1 (28.10.2026)</p>
+
+  <div class="grid">
+    <a class="card" href="dist/Интерактивная_справка.html">
+      <div class="k">Открывается в браузере</div>
+      <h2>Интерактивная справка</h2>
+      <p>«Живой» макет панели: щёлкайте по элементам экрана, чтобы переходить между окнами и читать описание каждой зоны. Карта экранов, пошаговые сценарии, поиск.</p>
+    </a>
+    <a class="card" href="dist/Руководство_пользователя_DC2.pdf">
+      <div class="k">PDF · 40 страниц</div>
+      <h2>Руководство пользователя</h2>
+      <p>Полное руководство: все экраны, режимы тренировок, история, спортсмен, подключения, обновление прошивки, решение проблем.</p>
+    </a>
+    <a class="card" href="dist/Быстрый_старт.pdf">
+      <div class="k">PDF · 1 страница A4</div>
+      <h2>Быстрый старт</h2>
+      <p>Памятка-инфографика для печати: первая тренировка за две минуты и подсказки по экрану тренировки.</p>
+    </a>
+    <a class="card" href="dist/Быстрый_старт.html">
+      <div class="k">Открывается в браузере</div>
+      <h2>Быстрый старт (веб)</h2>
+      <p>Та же памятка в виде веб-страницы.</p>
+    </a>
+  </div>
+
+  <p class="note">Исходники и скрипты сборки: <a href="https://github.com/rustemnasyrov/dante-rowing-machine-manual">репозиторий на GitHub</a>.</p>
+</main>
+</body>
+</html>
