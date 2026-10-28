@@ -120,6 +120,8 @@ def render(cover, toc, body, workdir: Path) -> Path:
     # pandoc выводит <header><h1 class="title">: убираем, обложка своя
     h = html_path.read_text()
     h = re.sub(r"<header id=\"title-block-header\">.*?</header>", "", h, flags=re.S)
+    # pandoc задаёт таблицам равные ширины столбцов; убираем, чтобы ширина подбиралась по содержимому
+    h = re.sub(r"<colgroup>.*?</colgroup>", "", h, flags=re.S)
     html_path.write_text(h)
     subprocess.run([CHROME, "--headless=new", "--disable-gpu", "--no-pdf-header-footer",
                     f"--user-data-dir={workdir / 'chrome'}", f"--print-to-pdf={pdf_path}",
